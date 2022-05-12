@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="./script.js"></script>
+    <script>
+      ;(async () => {
+        const file = await (await fetch("/data.odb")).text()
+        ODB.json(file).forEach((d) => {
+          console.log(d)
+        })
+      })()
+    </script>
+  </head>
+  <body></body>
+</html>
