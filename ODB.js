@@ -35,6 +35,6 @@ const ODB = {
   },
   jsonFile: async function (url) {
     const file = await (await fetch(url)).text()
-    return ODB.json(file)
+    return this.json(file)
   },
 }
